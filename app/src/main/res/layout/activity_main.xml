@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    tools:context=".BarCodeReader"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        >
+
+        <TextView
+            android:layout_width="477dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/robotobold"
+            android:text="CÓDIGO DE BARRAS"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/elgin_png"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="208dp"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    tools:ignore="NestedWeights">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="COD." />
+
+                    <EditText
+                        android:id="@+id/editTextCodeBar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/box"
+                        android:gravity="center_vertical"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:nextFocusDown="@id/editTextCodeBar2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="TYPE" />
+
+                    <EditText
+                        android:id="@+id/editTextCodeBar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/box"
+                        android:gravity="center_vertical"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:nextFocusDown="@id/editTextCodeBar2"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="RtlCompat" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonInitRead"
+            android:layout_width="343dp"
+            android:layout_height="37dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/robotobold"
+            android:text="INICIAR LEITURA"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <Button
+            android:id="@+id/buttonCleanField"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/robotobold"
+            android:text="LIMPAR CAMPO"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_footer_java_android_1_0_0"
+            android:textColor="#7F7F7F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="50dp"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp"
+        android:orientation="vertical"></LinearLayout>
+</RelativeLayout>
